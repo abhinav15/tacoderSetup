@@ -96,7 +96,8 @@ function create_prompt {
         gitpart="-[$repo | ~$mod +$add -$del$stash$rstat$submodule_info ]"
     fi
 
+    date=$(date +"%H:%M:%S")
 
-    PS1="\n$COLORPS\u@\h$COLORPS-[$BOLD$AZURE\w$COLORPS]$gitpart-$NOC$PROMPT "
+    PS1="\n$COLORPS\u@\h$COLORPS-[$BOLD$PINK$date$COLORPS]$COLORPS-[$BOLD$AZURE\w$COLORPS]$gitpart-$NOC$PROMPT "
 
 }
